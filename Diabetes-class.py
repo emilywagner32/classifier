@@ -51,6 +51,7 @@ if st.button("Rename Columns", key="Rename Columns"):
 with st.expander("Show new Column names", expanded=False):
     st.write(data.columns)
 
+data = data.rename(columns={'Diabetes_binary':'Diabetes_Class'})
 
 df = data.astype('int64')
 
